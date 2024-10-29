@@ -124,5 +124,16 @@ public class CardapioService {
 		return "Registro de cardápio excluído com sucesso";
 
 	}
+	public Cardapio searchAnCardapioByWeek(Date date) throws Exception {
+		try {
+			List<Cardapio> cardapio =  cardapioRepository.findByData(date);
+			
+			return cardapio.get(0);
+
+		} catch (Exception e) {
+			return null;
+		}
+
+	}
 
 }
