@@ -46,8 +46,8 @@ public class CardapioController {
 	private static final Logger logger = Logger.getLogger(CardapioController.class.getName());
 
 	@PostMapping
-	public ResponseEntity<Object> addBuyer(@RequestBody Cardapio cardapio) {
-		System.out.println("aquio");
+	public ResponseEntity<Object> addCarpio(@RequestBody Cardapio cardapio) {
+		
 
 		try {
 			return ResponseEntity.ok(cardapioService.addCardapio(cardapio));

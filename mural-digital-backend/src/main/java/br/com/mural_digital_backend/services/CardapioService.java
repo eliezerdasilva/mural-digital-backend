@@ -89,9 +89,9 @@ public class CardapioService {
 
 	public List<Cardapio> listAllCardapio() {
 
-		List<Cardapio> buyerDTOs = cardapioRepository.findAll();
+		List<Cardapio> cardapio = cardapioRepository.findAll();
 
-		return buyerDTOs;
+		return cardapio;
 	}
 
 	public List<Cardapio> searchAnCardapioByDate(Date date) throws Exception {

@@ -13,4 +13,12 @@ CREATE TABLE `cardapio` (
   UNIQUE KEY `idcardapio_UNIQUE` (`idcardapio`),
   UNIQUE KEY `data_UNIQUE` (`data`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `mural_digital`.`eventossisae` (
+  `idEventosSisae` INT NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(45) NOT NULL,
+  `mensagem` VARCHAR(45) NOT NULL,
+  `imagem` MEDIUMBLOB NOT NULL,
+  PRIMARY KEY (`idEventosSisae`));
+
 /*!40101 SET character_set_client = @saved_cs_client */;
