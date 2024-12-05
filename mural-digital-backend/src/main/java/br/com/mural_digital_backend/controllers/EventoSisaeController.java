@@ -34,20 +34,14 @@ import jakarta.validation.Valid;
 
 
 @RestController
-@RequestMapping("/media")
+@RequestMapping("/api/sisae")
 public class EventoSisaeController {
 	
-	@PostMapping
-	public ResponseEntity<Object> loginSisae(@RequestBody String email, String name) {
+	
+	@Autowired
+    EventosSisaeService eventosSisaeService;
 
-		return null;
 
-	}
-    private final EventosSisaeService eventosSisaeService;
-
-    public EventoSisaeController(EventosSisaeService eventosSisaeService) {
-        this.eventosSisaeService = eventosSisaeService;
-    }
 
     @PostMapping("/cadastrar")
     public ResponseEntity<Object> cadastrarMidia(@RequestBody @Valid EventosSisae eventosSisae) {
@@ -75,7 +69,7 @@ public class EventoSisaeController {
         }
     }
 
-    // Classe para padronizar a resposta da API
+    
     static class ApiResponse {
         private String message;
         private Long id;
@@ -133,8 +127,8 @@ public class EventoSisaeController {
 	@DeleteMapping(value = "/{id}")
 	public ResponseEntity<Object> deleteEventos(@PathVariable Long id) throws Exception {
 		try {
-			// String message = eventosSisaeService.deleteEventos(id);
-			return null;// ResponseEntity.ok(message);
+			String message = eventosSisaeService.deleteEventoSisae(id);
+			return ResponseEntity.ok(message);
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().body("Erro ao excluir o registro de cardápio: " + e.getMessage());
 		}
