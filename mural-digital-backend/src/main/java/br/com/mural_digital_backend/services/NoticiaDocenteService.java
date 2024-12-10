@@ -1,10 +1,12 @@
 package br.com.mural_digital_backend.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.mural_digital_backend.models.Cardapio;
 import br.com.mural_digital_backend.models.EventosSisae;
 import br.com.mural_digital_backend.models.NoticiaDocente;
 import br.com.mural_digital_backend.repository.NoticiaDocenteRepository;
@@ -65,6 +67,11 @@ public class NoticiaDocenteService {
 		}
 		return "Registro de Noticia excluído com sucesso";
 
+	}
+	public List<NoticiaDocente> listAllNoticiaDocente() {
+		List<NoticiaDocente> noticiaDocente = noticiaDocenteRepository.findAll();
+
+		return noticiaDocente;
 	}
 	
 }

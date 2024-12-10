@@ -69,5 +69,22 @@ public class NoticiaDocenteController {
 		}
 
 	}
+	@GetMapping("/listAlls")
+	public ResponseEntity<List<NoticiaDocente>> listCardapio() {
+		try {
+			List<NoticiaDocente> noticiaDocente = noticiaDocenteService.listAllNoticiaDocente();
+
+			if (!noticiaDocente.isEmpty()) {
+				return ResponseEntity.ok(noticiaDocente);
+			} else {
+				return ResponseEntity.noContent().build();
+			}
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
+	}
 
 }
