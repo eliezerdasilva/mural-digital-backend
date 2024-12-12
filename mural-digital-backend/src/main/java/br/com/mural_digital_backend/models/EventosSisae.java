@@ -41,5 +41,6 @@ public class EventosSisae {
 	@Column(name="imagem") 
 	@Lob
 	private byte[] imagem;
+	private Date data;
 
 }

@@ -45,7 +45,8 @@ public class CardapioController {
 	SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 	private static final Logger logger = Logger.getLogger(CardapioController.class.getName());
 
-	@PostMapping
+	
+	 @PostMapping("/cadastrar")
 	public ResponseEntity<Object> addCarpio(@RequestBody Cardapio cardapio) {
 		
 

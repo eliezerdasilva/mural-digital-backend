@@ -3,5 +3,6 @@ CREATE TABLE `eventossisae` (
   `titulo` VARCHAR(45) NOT NULL,
   `mensagem` VARCHAR(45) NOT NULL,
   `imagem` LONGBLOB NOT NULL,
+  `data` DATE NOT NULL,
   PRIMARY KEY (`idEventosSisae`)
 );
