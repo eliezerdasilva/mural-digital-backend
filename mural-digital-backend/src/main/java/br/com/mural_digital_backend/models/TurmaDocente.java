@@ -29,9 +29,6 @@ public class TurmaDocente {
 	@Enumerated(EnumType.STRING) 
 	@Column(nullable = false)
 	private Turma turma;	
-	@NotNull(message = "O campo  de disciplina é OBRIGATÓRIO")
-	@Column(name="disciplina") 
-	private String disciplina;
 	@NotNull(message = "O campo  de loginServidor é OBRIGATÓRIO")
 	@ManyToOne
     @JoinColumn(name = "id_servidor", referencedColumnName = "idServidor", nullable = false)

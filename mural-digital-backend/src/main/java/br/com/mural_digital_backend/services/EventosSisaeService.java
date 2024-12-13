@@ -19,6 +19,8 @@ public class EventosSisaeService {
 	@Autowired
 	EventoSisaeRepository eventoSisaeRepository;
 	
+	//ALTER TABLE evento_sisae MODIFY COLUMN imagem LONGBLOB;
+
 	public Long cadastrarEvento(@Valid EventosSisae eventoSisae) throws Exception {
 		if (eventoSisae == null) {
 			throw new Exception("Dados inválidos ou nulos");

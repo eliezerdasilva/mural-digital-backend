@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.mural_digital_backend.models.Cardapio;
+import br.com.mural_digital_backend.models.LoginServidor;
 import br.com.mural_digital_backend.models.TipoServidor;
 import br.com.mural_digital_backend.models.Turma;
 import br.com.mural_digital_backend.services.CardapioService;
@@ -29,7 +30,7 @@ public class LoginServidorController {
 	private LoginServidorService loginServidorService;
 
 	 @GetMapping("/consultar")
-	    public TipoServidor consultarTipoServidor(@RequestParam String email) {
+	    public LoginServidor consultarTipoServidor(@RequestParam String email) {
 	        return loginServidorService.getTipoServidorByEmail(email);
 	    }
 

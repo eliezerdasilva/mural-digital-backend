@@ -41,7 +41,8 @@ public class EventoSisaeController {
 	@Autowired
     EventosSisaeService eventosSisaeService;
 
-
+	/*ALTER TABLE evento_sisae MODIFY COLUMN imagem LONGBLOB NOT NULL;
+*/
 
     @PostMapping("/cadastrar")
     public ResponseEntity<Object> cadastrarMidia(@RequestBody @Valid EventosSisae eventosSisae) {

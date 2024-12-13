@@ -21,10 +21,10 @@ public class LoginServidorService {
 	@Autowired
 	LoginServidorRepository loginServidorRepository;
 
-	public TipoServidor getTipoServidorByEmail(String email) {
+	public LoginServidor getTipoServidorByEmail(String email) {
 		ArrayList<LoginServidor> servidor = loginServidorRepository.findTipoServidorByEmail(email);
 		if(!servidor.isEmpty()) {
-			return servidor.get(0).getTipoServidor();
+			return servidor.get(0);
 		}
 		return null;
 	}
